@@ -25,10 +25,10 @@ module.exports = MovingObject;
 //   });
 
 MovingObject.prototype.draw = function (ctx) {
-    ctx.fillStyle = this.object[color];
+    ctx.fillStyle = this.color;
     ctx.beginPath();
 
-    ctx.arc(this.object[pos][0], this.object[pos][1], this.object[radius], 0, 2 * Math.PI, true);
+    ctx.arc(this.pos[0], this.pos[1], this.radius, 0, 2 * Math.PI, true);
 
     ctx.fill();
 }

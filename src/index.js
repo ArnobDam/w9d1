@@ -11,4 +11,14 @@ const mo = new MovingObject({
     color: "#00FF00"
 });
 
-mo.draw();
+document.addEventListener("DOMContentLoaded", function() {
+    const canvasEl = document.getElementById("game-canvas");
+    canvasEl.width = 500;
+    canvasEl.height = 500;
+
+    const ctx = canvasEl.getContext("2d");
+
+    mo.draw(ctx);
+})
+
+// mo.draw();
